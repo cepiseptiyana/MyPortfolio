@@ -128,7 +128,7 @@ header .navbar ul li a {
 }
 header .navbar ul li a.active,
 header .navbar ul li a:hover {
-  color: #011aff;
+  color: var(--primary-color);
   border-bottom: 0.2rem solid #011aff;
   padding: 0.5rem 0;
 }
@@ -1065,7 +1065,7 @@ form .button-area {
   cursor: pointer;
   border-radius: 5px;
   padding: 13px 25px;
-  background: #2506ad;
+  background: var(--primary-color-dark);
   box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
   transition: 0.3s ease;
   font-family: "Nunito", sans-serif;
@@ -1149,7 +1149,7 @@ form .button-area {
   display: block;
 }
 .footer .box-container .box a:hover {
-  color: #ffae00;
+  color: var(--primary-color);
 }
 .footer .box-container .box .share {
   display: flex;
