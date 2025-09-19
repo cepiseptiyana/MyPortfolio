@@ -1,6 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 
+:root {
+  --primary-color: #007bff;
+  --primary-color-dark: #093fb4;
+  --secondary-color: #44444e;
+  --gray-color: #eeeeee;
+  --red-color: #dc143c;
+  --red-color-dark: rgb(184, 20, 53);
+  --font-size-base: 16px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -84,19 +94,20 @@ section {
   text-align: center;
 }
 .heading span {
-  color: rgb(115, 3, 167);
+  color: var(--red-color);
 }
 header .logo {
   font-size: 1.9rem;
   font-weight: 800;
   text-decoration: none;
-  color: #0e2431;
+  color: var(--red-color);
+
+  &:hover {
+    color: var(--red-color-dark);
+  }
 }
 header .logo i {
-  font-size: 2.2rem;
-}
-header .logo:hover {
-  color: #fc8c05;
+  font-size: 2.5rem;
 }
 header .navbar ul {
   list-style: none;
@@ -189,6 +200,7 @@ header .navbar ul li a:hover {
 }
 .home #particles-js {
   position: absolute;
+  background-color: white;
   top: 0;
   left: 0;
   height: 100%;
@@ -203,7 +215,7 @@ header .navbar ul li a:hover {
   width: 100%;
 }
 .home .content {
-  flex: 1 1 40rem;
+  /* flex: 1 1 40rem; */
   padding-top: 1rem;
   z-index: 1;
 }
@@ -224,12 +236,12 @@ header .navbar ul li a:hover {
 .home .content h2 {
   font-size: 5rem;
   font-weight: 800;
-  color: #002057;
+  color: var(--primary-color);
 }
 .home .content h2 span {
   font-size: 5rem;
   font-weight: 800;
-  color: #ff7b00;
+  color: var(--red-color);
 }
 .home .content p {
   font-size: 2.5rem;
@@ -239,7 +251,7 @@ header .navbar ul li a:hover {
 }
 .home .content p span {
   font-size: 2.5rem;
-  color: rgb(148, 8, 8);
+  color: var(--primary-color);
   font-weight: 600;
   padding: 1rem 0;
 }
@@ -251,7 +263,7 @@ header .navbar ul li a:hover {
   border-radius: 4em;
   transition: 0.5s;
   color: #fff;
-  background: #2506ad;
+  background: #093fb4;
   box-shadow: 0px 5px 18px rgba(48, 68, 247, 0.6);
   font-family: "Nunito", sans-serif;
 }
@@ -271,7 +283,8 @@ header .navbar ul li a:hover {
 .home .btn:hover i {
   transform: translateX(5px);
 }
-/* social icons start */
+
+/* SOCIAL icons start */
 .socials {
   position: relative;
   margin-top: 9rem;
@@ -289,8 +302,8 @@ header .navbar ul li a:hover {
   font-size: 2rem;
   display: inline-block;
   line-height: 44px;
-  color: #00d9ff;
-  background-color: #09011b;
+  /* color: #00d9ff; */
+  /* background-color: #09011b; */
   width: 44px;
   height: 44px;
   text-align: center;
@@ -300,28 +313,38 @@ header .navbar ul li a:hover {
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-.social-icons a:active,
+/* .social-icons a:active,
 .social-icons a:focus,
 .social-icons a:hover {
   color: #fff;
   background-color: #0685da;
+} */
+
+.social-icons a.linkedin {
+  background-color: var(--primary-color);
+  color: white;
+
+  &:hover {
+    background-color: var(--primary-color-dark);
+  }
 }
-.social-icons a.github:hover {
-  background-color: #0e0e0e;
+.social-icons a.github {
+  background-color: var(--secondary-color);
+  color: white;
+
+  &:hover {
+    background-color: #0e0e0e;
+  }
 }
-.social-icons a.twitter:hover {
-  background-color: #00aced;
+.social-icons a.gmail {
+  background-color: #dc143c;
+  color: white;
+
+  &:hover {
+    background-color: rgb(176, 18, 50);
+  }
 }
-.social-icons a.linkedin:hover {
-  background-color: #007bb6;
-}
-.social-icons a.dev:hover {
-  background-color: #070707;
-}
-.social-icons a.instagram:hover {
-  background-color: #ee00da;
-}
-/* social icons end */
+/* SOCIAL icons end */
 
 /* hero media queries starts*/
 @media (max-width: 450px) {
@@ -344,7 +367,7 @@ header .navbar ul li a:hover {
 /* hero media queries ends*/
 /* hero section end */
 
-/* about section starts */
+/* ABOUT section starts */
 .about {
   background: rgb(255, 255, 255);
 }
@@ -414,7 +437,7 @@ header .navbar ul li a:hover {
   border-radius: 0.5em;
   transition: 0.3s;
   color: #fff;
-  background: #2506ad;
+  background: var(--primary-color-dark);
   box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
   font-family: "Nunito", sans-serif;
 }
@@ -461,13 +484,13 @@ header .navbar ul li a:hover {
 /* skills section starts */
 .skills {
   min-height: 90vh;
-  background: linear-gradient(to bottom, #57059e, #4a00e0);
+  background-color: var(--gray-color);
 }
 .skills h2 {
-  color: #fff;
+  color: black;
 }
 .skills .heading span {
-  color: rgb(255, 230, 0);
+  color: var(--red-color);
 }
 .skills .container {
   background: rgba(0, 0, 22, 0.4);
@@ -489,11 +512,11 @@ header .navbar ul li a:hover {
   padding: 10px;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  background: rgba(0, 0, 22, 0.9);
+  background: rgba(0, 0, 6, 0.9);
   transition: 0.2s;
 }
 .skills .container .bar:hover {
-  box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
+  box-shadow: 0 8px 10px rgba(245, 245, 245, 0.8) !important;
   background-color: rgba(0, 0, 0, 0.9) !important;
 }
 .skills .container .bar .info {
@@ -532,10 +555,13 @@ header .navbar ul li a:hover {
 /* skills media queries ends*/
 /* skills section ends */
 
-/* education section starts */
+/* EDUCATION section starts */
 .education {
-  background: #e5ecfb;
+  background: white;
   min-height: 80vh;
+}
+.education .heading span {
+  color: var(--red-color);
 }
 .education .qoute {
   font-size: 1.5rem;
@@ -641,24 +667,25 @@ header .navbar ul li a:hover {
 
 /* work section starts */
 .work {
-  /* background: #010124; */
-  background: linear-gradient(to bottom, #000031, #00002c);
+  background: var(--gray-color);
 }
 .work h2 {
-  color: #fff;
+  color: black;
   padding: 1rem;
 }
 .work .heading span {
-  color: rgb(255, 230, 0);
+  color: var(--red-color);
 }
 .work .box-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
   margin: 2rem;
 }
 .work .box-container .box {
   flex: 1 1 30rem;
+  background-color: red;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   position: relative;
@@ -688,9 +715,10 @@ header .navbar ul li a:hover {
   height: 4.5rem;
   width: 100%;
   padding-left: 1rem;
-  background: #ffd900;
+  background: var(--primary-color);
 }
 .work .box-container .box .content .tag h3 {
+  color: white;
   font-size: 2rem;
 }
 .work .box-container .box:hover .content {
