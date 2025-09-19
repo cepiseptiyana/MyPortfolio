@@ -42,23 +42,30 @@ $(document).ready(function () {
 
   // <!-- emailjs to mail contact form data -->
   $("#contact-form").submit(function (event) {
-    emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
+    emailjs.init("uCbvbgoijcWsWpNZN");
+    event.preventDefault();
 
     emailjs
-      .sendForm("contact_service", "template_contact", "#contact-form")
+      .sendForm("service_hng9s1i", "template_wpcm0te", "#contact-form")
       .then(
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
           document.getElementById("contact-form").reset();
-          alert("Form Submitted Successfully");
+          alert("✅ Form Submitted Successfully To Email Cepi");
         },
         function (error) {
           console.log("FAILED...", error);
           alert("Form Submission Failed! Try Again");
         }
       );
-    event.preventDefault();
+
+    emailjs
+      .sendForm("service_hng9s1i", "template_b5nee1n", "#contact-form")
+      .then(function () {
+        console.log("✅ Auto-reply terkirim ke user");
+      });
   });
+
   // <!-- emailjs to mail contact form data -->
 });
 
